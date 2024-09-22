@@ -25,7 +25,7 @@ var module = {};
         Object.assign(module, await import(`${files.get.js}`));
         Object.assign(module, await import(`${files.write.js}`));
 
-        files.loading.content = module.get(files.loading.html)
+        files.loading.content = await module.get(files.loading.html)
         module.write(files.loading.content)
 
     } catch (error) {
