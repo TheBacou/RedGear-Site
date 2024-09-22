@@ -2,7 +2,7 @@ export async function get(file) {
     try {
         const response = await fetch(file);
         if (response.ok) {
-            return response.text();
+            return await response.text();
         } else {
             console.error('Erreur lors du chargement du fichier:', response.status);
         }
