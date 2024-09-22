@@ -12,7 +12,7 @@ var module = {};
 
 (async () => {
     try {
-        Object.assign(module, await import(`./${pages.loading.js}`)); // adding every fonction of "pages.loading.js" in module with other fonction fetched
+        Object.assign(module, await import(`./assets/js/pages/loading.js`)); // adding every fonction of "pages.loading.js" in module with other fonction fetched
     } catch (error) {
         console.error("Erreur lors du chargement du module JS", error);
     }
