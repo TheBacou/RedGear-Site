@@ -1,25 +1,17 @@
-var path = window.location.pathname.split('/')
-var file_name = path[path.length - 1]
+export async function loading(file) {
+    try {
+        const response = await fetch(file);
+        if (response.ok) {
+            const htmlContent = await response.text();
+            
+            document.open();
+            document.write(htmlContent);
+            document.close();
 
-var pages = {
-    "loading": {
-        "js": "assets/js/pages/loading.js", // path to the js file
-        "html": "loading.html" // path to the html file
+        } else {
+            console.error('Erreur lors du chargement du fichier:', response.status);
+        }
+    } catch (error) {
+        console.error('Erreur de réseau ou autre:', error);
     }
 }
-
-var module = {}
-
-
-(async () => {
-    try {
-        module.loading = await import(`./${pages.loading.js}`);
-        console.log(module)
-        console.log(module.loading)
-    } catch (error) {
-        console.error("Erreur lors du chargement du module JS", error);
-    }
-})();
-
-
-// loadHTML(pages.loading.html); send the loading page to user
