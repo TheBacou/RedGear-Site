@@ -1,6 +1,3 @@
-var path = window.location.pathname.split('/')
-var file_name = path[path.length - 1]
-
 async function loadHTML(file) {
     try {
         const response = await fetch(file);
@@ -18,5 +15,3 @@ async function loadHTML(file) {
         console.error('Erreur de réseau ou autre:', error);
     }
 }
-
-loadHTML('loading.html');
