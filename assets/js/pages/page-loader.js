@@ -17,7 +17,10 @@ var files = {
     }
 }
 
-var content = {}
+var content = {
+    "loading": {},
+    "navbar": {}
+}
 
 var module = {};
 
@@ -27,12 +30,15 @@ var module = {};
         Object.assign(module, await import(`${files.get.js}`));
         Object.assign(module, await import(`${files.write.js}`));
 
+        
         content.loading.html = await module.get(files.loading.html)
         module.write(content.loading.html)
 
+        
         content.navbar.json = JSON.parse(await module.get(files.navbar.json))
         Object.assign(module, await import(`${files.navbar.js}`));
 
+        
         content.navbar.html = module.navbar(content.navbar.json)
 
 
