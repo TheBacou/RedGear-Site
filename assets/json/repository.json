@@ -1,0 +1,31 @@
+{
+    "list": [
+        {
+            "name": "Atlas77",
+            "icon": "fa fa-code icon"
+        },
+        {
+            "name": "Atlas-core",
+            "icon": "fa fa-connectdevelop icon"
+        },
+        {
+            "name": "Realms-of-Power",
+            "icon": "fa fa-gamepad icon"
+        }
+    ],
+    "icons": {
+        "null": "fa fa-ban icon"
+    },
+    "html": [
+        "<div class='col-sm-6 col-md-5 col-lg-4 item'>",
+        "<div id='features' class='box'>",
+        "<i class='{icon}' style='color: var(--main-color);'></i>",
+        "<h3 class='name'>{name}</h3>",
+        "<p class='description' style='color: var(--secondary-text-color);'>",
+        "{description}",
+        "</p>",
+        "<a style='color: var(--main-color);' class='viewmore' href='projects.html?name={name}'>View more</a>",
+        "</div></div>"
+    ]
+}
+
