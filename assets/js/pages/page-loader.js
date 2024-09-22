@@ -39,7 +39,7 @@ var module = {};
         Object.assign(module, await import(`${files.navbar.js}`));
 
 
-        content.navbar.html = module.navbar(content.navbar.json)
+        content.navbar.html = await module.navbar(content.navbar.json)
 
 
 
