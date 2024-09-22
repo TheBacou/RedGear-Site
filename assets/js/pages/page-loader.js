@@ -14,7 +14,7 @@ var functions = {}
 (async () => {
     var e = fetch(pages.loading.js) 
     console.log(e)
-})
+})()
 
 
 // loadHTML(pages.loading.html); send the loading page to user
