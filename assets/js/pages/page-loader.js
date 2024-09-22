@@ -8,18 +8,16 @@ var pages = {
     }
 }
 
-var module = {}
-
+var module = {};
 
 (async () => {
     try {
-        module.loading = await import(`./${pages.loading.js}`);
-        console.log(module)
-        console.log(module.loading)
+        Object.assign(module, await import(`./${pages.loading.js}`)); // adding every fonction of "pages.loading.js" in module with other fonction fetched
     } catch (error) {
         console.error("Erreur lors du chargement du module JS", error);
     }
 })();
+
 
 
 // loadHTML(pages.loading.html); send the loading page to user
