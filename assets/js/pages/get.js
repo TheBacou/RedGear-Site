@@ -1,4 +1,4 @@
-export async function loading(file) {
+export async function get(file) {
     try {
         const response = await fetch(file);
         if (response.ok) {
