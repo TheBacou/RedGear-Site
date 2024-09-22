@@ -1,0 +1,19 @@
+{
+    "template": "<a class='navbar-brandList' target='_blank'href='{link}'> <i class='{icon}></i> {name} </a>",
+    "Terms of service": {
+        "link": "https://github.com/RedGear-Studio/RedGear-TOS",
+        "icon": "fa fa-gavel"
+    },
+    "Github": {
+        "link": "https://github.com/RedGear-Studio",
+        "icon": "fa fa-github"
+    },
+    "Discord": {
+        "link": "https://discord.gg/fTmhnFHuGW",
+        "icon": "fa fa-coffee"
+    },
+    "Projects": {
+        "link": "index.html#Projects",
+        "icon": "fa fa-file-text"
+    }
+}
