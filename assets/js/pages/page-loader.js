@@ -9,7 +9,7 @@ var files = {
         "js": "./write.js"
     },
     "navbar": {
-        "json": "../json/navbar.json",
+        "json": "./../json/navbar.json",
         "js": "./template/navbar.json"
     },
     "loading": {
