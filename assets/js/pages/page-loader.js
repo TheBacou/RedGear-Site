@@ -8,13 +8,18 @@ var pages = {
     }
 }
 
-var functions = {}
+var module = {}
 
 
 (async () => {
-    var e = fetch(pages.loading.js) 
-    console.log(e)
-})()
+    try {
+        module.loading = await import(`./${pages.loading.js}`);
+        console.log(module)
+        console.log(module.loading)
+    } catch (error) {
+        console.error("Erreur lors du chargement du module JS", error);
+    }
+})();
 
 
 // loadHTML(pages.loading.html); send the loading page to user
