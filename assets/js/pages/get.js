@@ -1,6 +1,6 @@
 export async function get(file) {
     try {
-        const response = await fetch(file);
+        const response = await import(file);
         if (response.ok) {
             return await response.text();
         } else {
