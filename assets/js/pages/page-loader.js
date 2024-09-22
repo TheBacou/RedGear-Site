@@ -35,7 +35,7 @@ var module = {};
         module.write(content.loading.html)
 
 
-        content.navbar.json = await module.get(`${files.navbar.json}`)
+        content.navbar.json = JSON.parse(await module.get(`${files.navbar.json}`))
         Object.assign(module, await import(`${files.navbar.js}`));
 
 
