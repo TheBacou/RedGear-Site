@@ -14,11 +14,15 @@ var files = {
     },
     "loading": {
         "html": "loading.html"
+    },
+    "template": {
+        "html": "template.html"
     }
 }
 
 var content = {
     "loading": {},
+    "template": {},
     "navbar": {}
 }
 
@@ -40,7 +44,9 @@ var module = {};
 
 
         content.navbar.html = await module.navbar(content.navbar.json)
-
+        content.template.html = await module.get(`${files.template.html}`)
+        content.template.html += "<script>document.getElementByName('navbar-box').innerHTML = " + content.navbar.html +" </script>"
+        module.write(content.template.html)
 
 
     } catch (error) {
