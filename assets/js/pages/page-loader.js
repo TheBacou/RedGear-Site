@@ -47,7 +47,7 @@ var module = {};
         content.template.html = await module.get(`${files.template.html}`)
         module.write(content.template.html)
 
-        document.getElementsByName('navbar-box').innerHTML = content.navbar.html
+        document.getElementsByName('navbar-box')[0].innerHTML = content.navbar.html
 
 
     } catch (error) {
