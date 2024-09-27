@@ -46,9 +46,9 @@ var module = {};
         content.navbar.html = await module.navbar(content.navbar.json)
         content.template.html = await module.get(`${files.template.html}`)
         
-        await module.write(content.template.html)
+        module.write(content.template.html)
 
-        await document.getElementsByName('navbar-box')[0].innerHTML = content.navbar.html
+        document.getElementsByName('navbar-box')[0].innerHTML = content.navbar.html
 
     } catch (error) {
         console.error("Erreur lors du chargement du module JS", error);
